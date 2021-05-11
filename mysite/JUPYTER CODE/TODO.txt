@@ -1,0 +1,7 @@
+prix au mettre carré en france sur une carte
+prix au mettre carré par commune
+le pourcentage de ventes par commune
+moyenne prix par commune
+nombre de piece moyenne par departement
+pourcentage par type de vente ( maison apart ...)
+moyenne superficie des terrain par rapport superficie maison
