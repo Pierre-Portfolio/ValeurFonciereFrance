@@ -1,0 +1,15 @@
+{% extends "index.html"%}
+
+{% load static %}
+
+
+{% block title %}Moyenne par departement{% endblock %}
+
+{% block contentGraph %}
+<h1 style="text-align : center">
+  Moyenne par département
+</h1>
+<div style="width:100%; height: 90%">
+  <img src="{% static graph %}" alt="Erreur d'affichage de {{graph}}" style="width:auto; height: 100%; margin:auto;">
+</div>
+{% endblock %}
