@@ -1,0 +1,52 @@
+{% extends "index.html"%}
+
+{% load static %}
+
+{% block title %}Vente pas département{% endblock %}
+
+{% block contentGraph %}
+<h1 style="text-align : center">
+  Nombre de vente par département
+</h1>
+<div style="width:100%; height: 90%">
+  <div style="height: 10%; with:auto;">
+      <span>Trier par département :</span>
+      <select id="Departement">
+        {% for i in region %}
+        {% if i == currentDep%}
+        <option value="{{i}}" selected>{{i}}</option>
+        {% else %}
+        <option value="{{i}}">{{i}}</option>
+        {% endif %}
+        {% endfor %}
+      </select>
+      <button class="button" type="button" onclick="changeCurrentDep()">Rechercher</button>
+  </div>
+  <img src="{% static graph %}" alt="Erreur d'affichage de {{graph}}" style="width:auto; height: 90%; margin:auto;">
+</div>
+
+{% endblock %}
+
+<style>
+  .button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+</style>
+
+{% block script %}
+<script type="text/javascript">
+  function changeCurrentDep(){
+    var select = document.getElementById("Departement");
+    var val = select.value;
+    console.log(val)
+    window.location.href = ""+val;
+  }
+</script>
+{% endblock %}

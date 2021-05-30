@@ -17,7 +17,7 @@ warnings.filterwarnings('ignore')
 ######
 # Fonction qui crée les DataFrame des valeurs foncieres 2020 et 2019
 
-def loadData():
+def loadData2020():
     data2020=pd.read_csv("./assets/valeursfoncieres-2020.txt", sep="|", low_memory=False)
     data2020.head()
     return data2020
@@ -66,12 +66,25 @@ def NbPieceParRegion(data2020):
     resPiece = DataFrameNbPiece2020.groupby(["Code departement"])["Nombre pieces principales"].mean()# / len(DataFramenbPiece2020)
     return resPiece
 
+def VenteParDep(data,codeDep):
+    tmpData = [data['Date mutation'],data['Nature mutation'],data['Code departement']]
+    tmpHeaders = ['Date mutation','Nature mutation','Code departement']
+    tmp = pd.concat(tmpData,axis=1,keys=tmpHeaders)
+    tmp_countvente_2019 = tmp.reset_index(drop=True)
+    tmp_countvente_2019 = tmp[tmp['Nature mutation'] == 'Vente']
+    tmp_countvente_2019 = tmp[tmp['Code departement'] == codeDep]
+    dataClean = tmp_countvente_2019.groupby(by="Date mutation",sort=True).count()
+    dataClean = dataClean.drop(labels='Code departement',axis=1)
+    dataClean.columns = ['Nombre de vente']
+    dataClean["Date"] = dataClean.index
+    #dataClean['Date'] = pd.to_datetime(dataClean["Date"])
+    return dataClean
 
 ############
 # Partie Django
 ############
 
-data2020 = cleanData(loadData())
+data2020 = cleanData(loadData2020())
 
 def index(request):
     return render(request,'index.html')
@@ -117,6 +130,23 @@ def createPieceParRegion():
     graphIMG.save("./assets/graph.png", "PNG")
     pylab.close()
 
+def createVenteParDep(data,codeDep=''):
+    code = codeDep if codeDep != '' else '01'
+    dataClean = VenteParDep(data2020, code)
+    dataClean.plot(title="Vente par département")
+    buffer = io.StringIO()
+    canvas = pylab.get_current_fig_manager().canvas
+    canvas.draw()
+    graphIMG = PIL.Image.frombytes("RGB", canvas.get_width_height(), canvas.tostring_rgb())
+    graphIMG.save("./assets/graph.png", "PNG")
+    pylab.close()
+
+def sendGraphDynamique(request,data,codeDep=''):
+    createVenteParDep(data,codeDep)
+    graph = 'graph.png'
+    context = {'region':data2020["Code departement"].unique(),'graph': graph, 'currentDep':codeDep}
+    return render(request,'VenteParDep.html',context)
+
 def createRandomGraph():
     x = [1, 2, 3, 4, 5, 6]
     y = [5, 2, 6, 8, 2, 7]
@@ -132,3 +162,4 @@ def createRandomGraph():
     graphIMG = PIL.Image.frombytes("RGB", canvas.get_width_height(), canvas.tostring_rgb())
     graphIMG.save("./assets/graph.png", "PNG")
     pylab.close()
+
