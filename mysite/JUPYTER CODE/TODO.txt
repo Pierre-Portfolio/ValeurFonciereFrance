@@ -1,7 +1,23 @@
-prix au mettre carré en france sur une carte
-prix au mettre carré par commune
-le pourcentage de ventes par commune
-moyenne prix par commune
-nombre de piece moyenne par departement
-pourcentage par type de vente ( maison apart ...)
-moyenne superficie des terrain par rapport superficie maison
+TRUC DEJA FAIT 
+	Prix au mettre carré 2020 + Graph classique
+	Pourcentage de vente par region
+	Moyenne Nombre de piece par region
+ 	Superficie maison / terrain
+	
+	Pourcentage vente de maison par departement
+	Pourcentage d'appartement par departement
+	Pourcentage autre par departement
+	Pourcentage du nbr de vente ou la valeur fonciere < 10000
+	Pourcentage du nbr de vente ou la valeur fonciere > 100000
+	Les 5 voies les plus chers de france
+	Liste des departement ou une valeur fonciere au moin > 250 000 000
+	Afficher les 5 trucs les moins cher
+	Jour ou y'a eu le plus de vente dans l'année
+	
+TRUC A FAIRE
+Pourcentage nbr de fois qu'un bien est vendu sur 1 ans
+Premiere Lettre Code Voie ou ya le plus de vente
+Type de voix ou ya le plus de vente
+Mois ou ya le plus de vente dans l'année
+Mois ou moyenne vente le plus cher
+Count Vente par type de local
