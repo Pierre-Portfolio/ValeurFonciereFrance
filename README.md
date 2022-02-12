@@ -21,7 +21,7 @@
 - Jupyter
 - Django
 
-## UI
+## API
 <img src="./static/pictures/visu.png" alt="Redicube" />
 
 ## Auteur
