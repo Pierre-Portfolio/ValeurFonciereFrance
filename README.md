@@ -12,13 +12,14 @@
 
 ## Objectifs
 
-- Réaliser une études des bien immobilier Français.
+- Réaliser une étude des bien immobilier Français.
 - Réaliser une api django.
 
 ## Techno
 
 - Python
-- Spyder
+- Jupyter
+- Django
 
 ## UI
 <img src="./static/pictures/visu.png" alt="Redicube" />
@@ -27,4 +28,3 @@
 
 - [@Owen](https://github.com/owen974)
 - [@Pierre](https://github.com/Pierre-Portfolio)
-- [@OeTroV](https://github.com/OeTroV)
