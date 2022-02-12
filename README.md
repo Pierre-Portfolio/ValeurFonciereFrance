@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./static/pictures/header.jpg" alt="Valeur Fonciere" />
+  <img src="./Assets/header.jpg" alt="Valeur Fonciere" />
 </h1>
 
 ---
@@ -8,12 +8,12 @@
 
 ## Petit résumé
 
-- Le Redi Cube est un variant du Rubik's Cube à trois couches sur lequel chaque virage déplace les trois bords autour de lui conçu par Oskar van Deventer en 2009 et publié par MoYu début juin 2017.
+- La valeur foncière est la valeur d’un terrain. Elle est le plus souvent analysée en fonction de son potentiel de construction futur. Nous analyserons ici celle des bien immobilier français en 2020.
 
 ## Objectifs
 
-- Trouver le nombre de dieu du Redi Cube (nombre de mouvements maximum pour résoudre toutes les positions initiales possible).
-- Réaliser un algorithme de résolution.
+- Réaliser une études des bien immobilier Français.
+- Réaliser une api django.
 
 ## Techno
 
