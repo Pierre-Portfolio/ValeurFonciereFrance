@@ -4,7 +4,7 @@
 
 ---
 
-# Analyse des valeurs foncières en 2020
+# Analyse des valeurs foncières Française en 2020
 
 ## Petit résumé
 
