@@ -21,8 +21,12 @@
 - Jupyter
 - Django
 
+- HTML
+- CSS
+- Tailwind
+
 ## API
-<img src="./static/pictures/visu.png" alt="Redicube" />
+<img src="./Assets/demo.gif" alt="Redicube" />
 
 ## Auteur
 

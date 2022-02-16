@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en" style="width:100%; height:100%; margin:0">
+<html lang="en" class="w-full h-full">
 <head>
     <meta charset="UTF-8">
     <title> Projet Python A3_S5 - {% block title %}{% endblock %} </title>
 </head>
-<body style="width:100%; height:100%; margin:0">
-    <div class="container" style="width:100%; height:100%; margin:0; display:flex;">
-        <div style="background-color:#CDCDCD; width:20%; height:100%; margin:0">
-            <div style="height:25%; width:100%">
-                <h3 style="margin:0; text-align:center; width:100%; padding-top:25%;">Que voulez vous afficher?</h3>
+<body class="bg-gradient-to-r from-cyan-500 to-blue-500 w-full h-full">
+    <div class="container w-full h-full flex m-0">
+        <div class="bg-white bg-opacity-5 to-blue-500 w-1/5 h-full m-0">
+            <div class="h-48 w-full">
+                <h3 class="m-0 text-center text-lg w-full mt-20 mb-20">Que voulez vous afficher?</h3>
             </div>
             <a href="/index/1">
-                <button style="width:100%; height:10%; background-color:#fff; border:None; box-shadow:1px 1px 1px grey; margin-bottom:5px;" type="button" onclick="">Moyenne des ventes par département</button>
+                <button class="bg-sky-500/100 w-full h-10 border-none mb-1" type="button" onclick="">Moyenne des ventes par département</button>
             </a>
             <a href="/index/2">
-                <button style="width:100%; height:10%; background-color:#fff; border:None; box-shadow:1px 1px 1px grey; margin-bottom:5px;" type="button" onclick="">Nombre de piece par département</button>
+                <button class="bg-sky-500/100 w-full h-10 border-none mb-1" type="button" onclick="">Nombre de piece par département</button>
             </a>
             <a href="/index/dynamics/1/01">
-                <button style="width:100%; height:10%; background-color:#fff; border:None; box-shadow:1px 1px 1px grey; margin-bottom:5px;" type="button" onclick="">Nombre de vente par département</button>
+                <button class="bg-sky-500/100 w-full h-10 border-none mb-1" type="button" onclick="">Nombre de vente par département</button>
             </a>
         </div>
-        <div id="container-right" style="width:80%; height:100%; margin:0; display:flex;">
-            <div id="container-graph" style="background-color:white; width:90%; height:90%; margin: auto">
+        <div id="container-right" class="w-4/5 h-full m-0 flex">
+            <div id="container-graph" class="bg-white w-11/12 h-11/12 m-auto rounded rounded-t-md">
                 {% block contentGraph %}{% endblock %}
             </div>
         </div>
@@ -31,5 +31,5 @@
 </html>
 
 {% block script %}
-<script></script>
+<script src="https://cdn.tailwindcss.com"></script>
 {% endblock %}

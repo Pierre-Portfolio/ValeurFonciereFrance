@@ -5,10 +5,8 @@
 {% block title %}Vente pas département{% endblock %}
 
 {% block contentGraph %}
-<h1 style="text-align : center">
-  Nombre de vente par département
-</h1>
-<div style="width:100%; height: 90%">
+<h1 class="text-center text-lg bg-sky-500/100 rounded-t-md">Nombre de vente par département</h1>
+<div class="w-full" style="height: 90%">
   <div style="height: 10%; with:auto;">
       <span>Trier par département :</span>
       <select id="Departement">
@@ -49,4 +47,5 @@
     window.location.href = ""+val;
   }
 </script>
+<script src="https://cdn.tailwindcss.com"></script>
 {% endblock %}
